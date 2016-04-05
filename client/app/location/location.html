@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 clearfix">
+      <button class="btn btn-default pull-right" ng-click="loc.add()">Add</button>
+    </div>
+  </div>
+  <table class="table table-responsive">
+    <tr>
+      <th>Name</th>
+      <th>Street Address</th>
+      <th>Postal / Zip</th>
+      <th>City</th>
+      <th>Region</th>
+      <th>Country</th>
+      <th>Active</th>
+      <th>Actions</th>
+    </tr>
+    <tr ng-repeat="local in loc.locations">
+      <td>{{ local.name }}</td>
+      <td>{{ local.address }}</td>
+      <td>{{ local.zip }}</td>
+      <td>{{ local.city }}</td>
+      <td>{{ local.region }}</td>
+      <td>{{ local.country }}</td>
+      <td>{{ local.active }}</td>
+      <td><a ng-click="loc.delete(local)" class="trash"><span class="fa fa-trash fa-2x"></span></a></td>
+    </tr>
+  </table>
+  
+</div>

@@ -1,0 +1,81 @@
+<div class="model-header">
+	<h3 class="modal-title">New Location</h3>
+</div>
+<form class="form" name="form" ng-submit="loc.createLocation(form)" novalidate>
+	<div class="modal-body">
+
+    <div class="form-group" ng-class="{ 'has-success': form.name.$valid && loc.submitted,
+                                        'has-error': form.name.$invalid && loc.submitted }">
+      <label>Name</label>
+
+      <input type="text" name="name" class="form-control" ng-model="loc.newLocation.name"
+             required/>
+      <p class="help-block" ng-show="form.name.$error.required && loc.submitted">
+        A newLocation name is required
+      </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-success': form.address.$valid && loc.submitted,
+                                        'has-error': form.address.$invalid && loc.submitted }">
+      <label>Address</label>
+
+      <input type="text" name="address" class="form-control" ng-model="loc.newLocation.address"
+             required/>
+      <p class="help-block" ng-show="form.address.$error.required && loc.submitted">
+        A address is required
+      </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-success': form.city.$valid && loc.submitted,
+                                        'has-error': form.city.$invalid && loc.submitted }">
+      <label>City</label>
+
+      <input type="text" name="city" class="form-control" ng-model="loc.newLocation.city"
+             required/>
+      <p class="help-block" ng-show="form.city.$error.required && loc.submitted">
+        A city is required
+      </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-success': form.zip.$valid && loc.submitted,
+                                        'has-error': form.zip.$invalid && loc.submitted }">
+      <label>Zip/Postal Code</label>
+
+      <input type="text" name="zip" class="form-control" ng-model="loc.newLocation.zip"
+             required/>
+      <p class="help-block" ng-show="form.zip.$error.required && loc.submitted">
+        A city is required
+      </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-success': form.region.$valid && loc.submitted,
+                                        'has-error': form.region.$invalid && loc.submitted }">
+      <label>Region</label>
+
+      <input type="text" name="region" class="form-control" ng-model="loc.newLocation.region"
+             required/>
+      <p class="help-block" ng-show="form.region.$error.required && loc.submitted">
+        A region is required
+      </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-success': form.country.$valid && loc.submitted,
+                                        'has-error': form.country.$invalid && loc.submitted }">
+      <label>Country</label>
+
+      <input type="text" name="country" class="form-control" ng-model="loc.newLocation.country"
+             required/>
+      <p class="help-block" ng-show="form.country.$error.required && loc.submitted">
+        A country is required
+      </p>
+    </div>
+
+    
+      
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-inverse btn-lg btn-register" type="submit">Create Location</button>
+		<button class="btn btn-warning" type="button" ng-click="loc.cancel()">Cancel</button>
+	</div>
+</form>
+
